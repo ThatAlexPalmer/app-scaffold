@@ -8,7 +8,10 @@ This is a frontend scaffold for Poet and TAP. It helps us quickly setup new land
 - [Styled Components](https://styled-components.com/) for styling and structure using `DefaultTheme` and semantically meaningful components
 - [ESLint](https://eslint.org/) for linting
 - [Prettier](https://prettier.io/) for code formatting
-- [Next Sitemap](https://next-sitemap.lamvishnusankar.com) for generating sitemaps
+- [Next Sitemap](https://next-sitemap.iamvishnusankar.com/) for generating sitemaps and
+- [Next Fonts](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) for loading fonts
+- [Next Images](https://nextjs.org/docs/basic-features/image-optimization) for loading images
+- [Real Favicon Generator](https://realfavicongenerator.net/) was used to generate favicons
 
 In the future, we'll revisit these two decisions:
 
@@ -21,6 +24,20 @@ Clone this repo using shallow depth. Replace {{new_directory_name}} with the nam
 
 ```sh
 git clone --depth 1 https://github.com/poet-network/app-scaffold {{new_directory_name}} && mv {{new_directory_name}} {{new_name}}
+```
+
+Install dependencies.
+
+```sh
+yarn install
+```
+
+Check `package.json` to start developing.
+
+Remove all git history and start fresh.
+
+```sh
+rm -rf .git && git init
 ```
 
 ## Contributing
