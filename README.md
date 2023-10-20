@@ -12,11 +12,30 @@ This is a frontend scaffold for Poet and TAP. It helps us quickly setup new land
 
 ## Development
 
-Clone this repo using shallow depth. Replace {{new_directory_name}} with the name of your new directory. Replace {{new_name}} with the name of the new project.
+Clone this template using shallow depth. Then install dependencies
 
-```sh
-git clone --depth 1 https://github.com/poet-network/app-scaffold {{new_directory_name}} && mv {{new_directory_name}} {{new_name}}
+```bash
+yarn install
 ```
+
+Then run the development server
+
+```bash
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can also build and run the production server, which will generate next sitemap as well as run all checks.
+
+```bash
+yarn build
+yarn start
+```
+
+## Screenshots
+![Main page](<mainPageScreenshot.png>)
+![Elements page](<elementsPageScreenshot.png>)
 
 ## Contributing
 
