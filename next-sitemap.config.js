@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-    siteUrl: "https://transferagentprotocol.xyz",
+    siteUrl: "https://poet.network",
     generateRobotsTxt: true, // (optional)
     exclude: ["/app*", "/_next/*"],
     robotsTxtOptions: {
@@ -11,7 +11,7 @@ const config = {
             },
             {
                 userAgent: "*",
-                allow: ["/", "/join"],
+                allow: ["/", "/elements"],
                 disallow: ["/app*", "/_next/*"],
             },
         ],
