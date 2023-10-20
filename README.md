@@ -10,11 +10,6 @@ This is a frontend scaffold for Poet and TAP. It helps us quickly setup new land
 - [Prettier](https://prettier.io/) for code formatting
 - [Next Sitemap](https://next-sitemap.lamvishnusankar.com) for generating sitemaps
 
-In the future, we'll revisit these two decisions:
-
-1. We're currently not using Next 13's [Layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) due to limited documentation.
-2. We're not using a Git template for now as shallow cloning is faster.
-
 ## Development
 
 Clone this repo using shallow depth. Replace {{new_directory_name}} with the name of your new directory. Replace {{new_name}} with the name of the new project.
