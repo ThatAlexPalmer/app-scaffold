@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
-import { FullWidth, Main } from "./wrappers";
+import { FullWidthContainer, Main, FooterContent, FooterWrapper, FooterAside } from "./wrappers";
+import { P } from "./typography";
 interface Props {
 	children: React.ReactNode;
 	className?: string;
@@ -7,9 +8,31 @@ interface Props {
 
 export default function Layout({ children }: Props) {
 	return (
-		<FullWidth>
+		<FullWidthContainer>
 			<Navbar />
 			<Main>{children}</Main>
-		</FullWidth>
+			<FooterWrapper>
+				<FooterContent>
+					<P>
+						These
+					</P>
+					<P>
+						Can
+					</P>
+					<P>
+						Be
+					</P>
+					<P>
+						Links
+					</P>
+				</FooterContent>
+				<FooterAside>
+					<span>
+						© {new Date().getFullYear()} Poet Network Inc.
+						<br />
+					</span>
+				</FooterAside>
+			</FooterWrapper>
+		</FullWidthContainer>
 	);
 }

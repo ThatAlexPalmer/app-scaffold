@@ -1,54 +1,50 @@
 import styled from "styled-components";
 
 const H1 = styled.h1`
-    font-family: "IBM Plex Mono", sans-serif;
-    max-width: 52rem;
+	position: relative;
+    max-width: 72rem;
     font-size: ${({ theme }) => theme.fontSizes.H1};
     line-height: ${({ theme }) => theme.lineHeights.H1};
-    font-weight: 600;
-	text-align: center;
-    margin-bottom: 4rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
     padding: 0;
 
-    /** iPad portrait mode and equivalent devices */
+	/** iPad portrait mode and equivalent devices */
     @media only screen and (max-width: 768px) {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     /** iPhone portrait mode and equivalent devices */
     @media only screen and (max-width: 512px) {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 `;
 
 const H2 = styled.h2`
     position: relative;
-    font-family: "IBM Plex Mono", sans-serif;
-    max-width: 52rem;
+    max-width: 62rem;
     font-size: ${({ theme }) => theme.fontSizes.H2};
     line-height: ${({ theme }) => theme.lineHeights.H2};
-    font-weight: 600;
-	text-align: center;
-    margin-bottom: 4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
     padding: 0;
 
-    /** iPad portrait mode and equivalent devices */
+	/** iPad portrait mode and equivalent devices */
     @media only screen and (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.618rem;
     }
 `;
 
 const H3 = styled.h3`
-    font-family: "IBM Plex Mono", sans-serif;
-    max-width: 40rem;
+	position: relative;
+    max-width: 52rem;
     font-size: ${({ theme }) => theme.fontSizes.H3};
     line-height: ${({ theme }) => theme.lineHeights.H3};
-    font-weight: 600;
-	text-align: center;
-    margin-bottom: 4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
     padding: 0;
 
-    /** iPad portrait mode and equivalent devices */
+	/** iPad portrait mode and equivalent devices */
     @media only screen and (max-width: 768px) {
         font-size: 2rem;
     }
@@ -63,48 +59,38 @@ const H3 = styled.h3`
 // blockquote element with a border-left
 const Blockquote = styled.blockquote`
     position: relative;
-    max-width: 40rem;
+    max-width: 748px;
     font-size: ${({ theme }) => theme.fontSizes.large};
     font-weight: 400;
+    text-align: left;
     line-height: 1.58rem;
-	font-style: italic;
     word-wrap: break-word;
     padding: 0;
-    margin: 0 0 4rem 0;
+    margin-block-start: 0;
+    margin-block-end: 4rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    border-left: 2px solid ${({ theme }) => theme.colors.main};
+    padding-left: 1.618rem;
+    left: -1.618rem;
 
-    &::before {
-        content: "";
-        position: absolute;
-        font-size: 4rem;
-        width: 0.2rem;
-        height: 180%;
-        background-color: ${({ theme }) => theme.colors.main};
-        border-radius: ${({ theme }) => theme.borderRadius.main};
-        top: -0.618rem;
-        left: -2.618rem;
-
-        /** iPhone portrait mode and equivalent devices */
-        @media only screen and (max-width: 475px) {
-            content: no-close-quote;
-        }
+    a:hover {
+        color: ${({ theme }) => theme.colors.text};
+        background: ${({ theme }) => theme.colors.main};
     }
 
+    &::before,
     &::after {
-        content: no-close-quote;
-        position: absolute;
-        font-size: 4rem;
-        top: -1.618rem;
-        left: -2.618rem;
+        content: none;
     }
 `;
 
 const P = styled.p`
-	font-family: "IBM Plex Mono", sans-serif;
-    max-width: 40rem;
+    max-width: 52rem;
     font-size: ${({ theme }) => theme.fontSizes.medium};
     letter-spacing: 0.02rem;
     font-weight: 400;
-    line-height: 1.618rem;
+    line-height: ${({ theme }) => theme.lineHeights.P};
     word-wrap: break-word;
     padding: 0;
     margin: 0 0 1.58rem 0;
@@ -121,7 +107,7 @@ const P = styled.p`
 `;
 
 const Label = styled.label`
-    max-width: 40rem;
+    max-width: 52rem;
     font-size: ${({ theme }) => theme.fontSizes.large};
     font-weight: 400;
     line-height: 1.58rem;

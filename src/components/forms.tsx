@@ -7,10 +7,9 @@ const FormWrapper = styled.form`
     align-items: left;
     justify-content: flex-start;
     align-self: flex-start;
-    width: 95%;
+    width: 100%;
 	height: 100%;
-	min-height: 100vh;
-    margin: 0 auto;
+    margin: 0;
 
 	label {
 		font-size: 1.25rem;
@@ -32,7 +31,7 @@ const FormInput = styled.input`
     padding: 0 1.25rem;
     background: ${({ theme }) => theme.colors.input};
     border: none;
-    border-radius: 4px;
+    border-radius: ${({ theme }) => theme.borderRadius.main};
     box-sizing: border-box;
     outline: none;
     color: ${({ theme }) => theme.colors.text};
@@ -41,12 +40,12 @@ const FormInput = styled.input`
     margin-bottom: 0.5rem;
 
     &:focus {
-        outline: 1px solid ${({ theme }) => theme.colors.accent};
+        outline: 1px solid ${({ theme }) => theme.colors.outline};
     }
 
     &:hover {
-        outline: 1px solid ${({ theme }) => theme.colors.accent};
-		box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.accent};
+        outline: 1px solid ${({ theme }) => theme.colors.outline};
+		box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.outline};
     }
 
     @media only screen and (max-width: 768px) {
@@ -64,7 +63,7 @@ const FormTextArea = styled.textarea`
     padding: 1.25rem;
     background: ${({ theme }) => theme.colors.input};
     border: none;
-    border-radius: 4px;
+    border-radius: ${({ theme }) => theme.borderRadius.main};
     box-sizing: border-box;
     outline: none;
     color: ${({ theme }) => theme.colors.text};
@@ -74,11 +73,11 @@ const FormTextArea = styled.textarea`
     resize: vertical;
 
     &:focus {
-        outline: 1px solid ${({ theme }) => theme.colors.accent};
+        outline: 1px solid ${({ theme }) => theme.colors.outline};
     }
 
     &:hover {
-        outline: 1px solid ${({ theme }) => theme.colors.accent};
+        outline: 1px solid ${({ theme }) => theme.colors.outline};
     }
 
     @media only screen and (max-width: 768px) {
