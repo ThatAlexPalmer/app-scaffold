@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }: AppProps & { Component: Ne
 					<meta property="og:type" content="website" />
 					<meta property="og:site_name" content="Poet's App Scaffold" />
 					<meta property="og:url" content="https://poet.network" />
-					<meta property="og:title" content="EhList" />
+					<meta property="og:title" content="Poet Network" />
 					<meta
 						property="og:description"
 						content="Tokenized capital markets infrastructure company."
