@@ -9,7 +9,7 @@ export default function Home() {
 				<H1>Poet's frontend scaffold.</H1>
 			</Heading>
 			<P>
-				Used to quickly setup frontend projects. See <Link href="/join">Elements</Link> for examples of what components and forms look like. This scaffold comes with:
+				Used to quickly setup frontend projects. See <Link href="/elements">Elements</Link> for examples of what components and forms look like. This scaffold comes with:
 			</P>
 			<P>
 				<Link href="https://nextjs.org/">Next.js</Link> as the framework.
