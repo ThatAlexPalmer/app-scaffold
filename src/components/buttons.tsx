@@ -3,7 +3,7 @@ import styled from "styled-components";
 const LogoRouter = styled.button`
     position: relative;
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: row nowrap;
     justify-content: center;
     align-items: center;
     min-width: 48px;
@@ -28,27 +28,19 @@ const StyledA = styled.button`
 	width: auto;
 	height: 32px;
     font-size: ${({ theme }) => theme.fontSizes.baseline};
-	padding: 0 1rem;
+	padding: 0 0 0 1rem;
     background-color: inherit;
     border: none;
     color: ${({ theme }) => theme.colors.text};
 
-    &:before {
-        content: "";
-        z-index: 1;
-        position: absolute;
-        display: block;
-        transform: skew(31rad);
-        left: 0;
-        width: 0.618rem;
-        height: 31px;
-        background-color: ${({ theme }) => theme.colors.accent};
+    &:hover {
+		opacity: 0.8;
         transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     }
 
-    &:hover:before {
-        width: 85%;
-    }
+	&:nth-last-child(1){
+		padding-right: 1rem;
+	}
 `;
 
 const PrimaryButton = styled.button`

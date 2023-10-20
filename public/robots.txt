@@ -5,12 +5,12 @@ Allow: /
 # *
 User-agent: *
 Allow: /
-Allow: /join
+Allow: /elements
 Disallow: /app*
 Disallow: /_next/*
 
 # Host
-Host: https://transferagentprotocol.xyz
+Host: https://poet.network
 
 # Sitemaps
-Sitemap: https://transferagentprotocol.xyz/sitemap.xml
+Sitemap: https://poet.network/sitemap.xml

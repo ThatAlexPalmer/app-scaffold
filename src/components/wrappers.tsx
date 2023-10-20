@@ -1,39 +1,50 @@
 import styled from "styled-components";
 
-const FullWidth = styled.div`
+const FullWidthContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
     align-items: flex-start;
-    flex: 1;
-    width: auto;
-    min-height: 100vh;
-    padding: 0;
+    align-self: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    max-width: 2450px;
+    min-height: 100%;
+    margin: auto;
+    padding: 0 4%;
 `;
 
 const Nav = styled.nav`
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     align-self: center;
     width: 100%;
-    max-width: 1400px;
     height: 4rem;
-    padding: 0.5rem;
+`;
+
+const Logotype = styled.span`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+	font-size: ${({ theme }) => theme.fontSizes.baseline};
+	font-weight: 600;
+	width: 8rem;
 `;
 
 const Main = styled.main`
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
-    align-self: center;
+    align-self: flex-start;
     justify-content: flex-start;
     flex: 1;
     width: 100%;
-	max-width: 1400px;
     height: auto;
-	padding: 0.5rem;
 
     @media only screen and (max-width: 820px) {
         width: 100%;
@@ -48,7 +59,7 @@ const Main = styled.main`
     }
 
     & mark {
-        color: ${({ theme }) => theme.colors.accent};
+        color: ${({ theme }) => theme.colors.main};
         background-color: transparent;
     }
 `;
@@ -56,10 +67,10 @@ const Main = styled.main`
 const Heading = styled.div`
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    align-self: center;
-    text-align: center;
-    margin: 9rem 0;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin: 8rem 0 2rem 0;
+  
 
     /** iPhone portrait mode and equivalent devices */
     @media only screen and (max-width: 768px) {
@@ -75,23 +86,8 @@ const Heading = styled.div`
 const Content = styled.div`
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    align-self: center;
-    justify-content: flex-start;
-    flex: 1;
-    width: auto;
-    max-width: 1280px;
-    height: auto;
-    margin: 0 auto;
-
-    /** iPad Air and equivalent devices */
-    @media (max-width: 820px) {
-        width: 100%;
-    }
-    /** Generic tablet and equivalent devices */
-    @media (max-width: 768px) {
-        align-items: center;
-    }
+    align-items: flex-start;
+	justify-content: flex-start;
 `;
 
 const Article = styled.article`
@@ -122,6 +118,29 @@ const Article = styled.article`
     }
 `;
 
+const Credits = styled.div`
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: ${({ theme }) => theme.fontSizes.large};
+	margin-bottom: 4rem;
+
+	a, span {
+        padding: 0 1rem 0 0;
+        /** iPhone portrait mode and equivalent devices */
+		@media only screen and (max-width: 512px) {
+			font-size: ${({ theme }) => theme.fontSizes.baseline};
+			padding: 0 0.3rem 0 0;
+		}
+    }
+
+	a:hover {
+		color: ${({ theme }) => theme.colors.background} !important;
+		background: ${({ theme }) => theme.colors.main} !important;
+	}
+`;
+
 const FooterWrapper = styled.footer`
     display: flex;
     flex-flow: row nowrap;
@@ -138,7 +157,7 @@ const FooterWrapper = styled.footer`
 const FooterContent = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.618rem;
+    grid-gap: 3.618rem;
     width: 60%;
     align-items: start;
     justify-items: start;
@@ -161,6 +180,7 @@ const FooterContent = styled.div`
 `;
 
 const FooterAside = styled.aside`
+    position: relative;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -172,7 +192,8 @@ const FooterAside = styled.aside`
         font-size: ${({ theme }) => theme.fontSizes.small};
     }
 
-    p {
+    span {
+        position: relative;
         font-size: ${({ theme }) => theme.fontSizes.baseline};
         margin: 0;
 
@@ -183,4 +204,4 @@ const FooterAside = styled.aside`
     }
 `;
 
-export { FullWidth, Nav, Main, Heading, Content, Article, FooterWrapper, FooterContent, FooterAside };
+export { FullWidthContainer, Nav, Logotype, Main, Heading, Content, Article, Credits, FooterWrapper, FooterContent, FooterAside };
